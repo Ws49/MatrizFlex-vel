@@ -76,7 +76,8 @@ public class FlexMatriz<T>{
                 newCell.setPrevius(newLineAux);
                 newLineAux = newCell;
             }
-
+            newLineAux.setTop(lineOld);
+            lineOld.setBottom(newLineAux);
             lineOld = cursorLine = cursorLine.getBottom();
         }
     }
